@@ -18,11 +18,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const rotate = keyframes`
-100%{
-  transform:rotate(1turn);
-}
-`;
 
 const Box = styled.div`
   width: 75%;
@@ -31,6 +26,11 @@ const Box = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+const rotate = keyframes`
+100%{
+  transform:rotate(1turn);
+}
 `;
 
 const Round = styled.div`
