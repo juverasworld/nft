@@ -1323,6 +1323,16 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
+"@fontsource/akaya-telivigala@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/akaya-telivigala/-/akaya-telivigala-5.0.8.tgz#b61737ea4a73085ab26db6be9ca822f40ba6529a"
+  integrity sha512-ysb496WrbhrdT0Vtpjp1tSxYQYky+rCqonGcOXTri+jk4LE9meauxJPXbX1wiyxfEokNBnP2LK2WE8K2AWHblA==
+
+"@fontsource/sora@^5.0.16":
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@fontsource/sora/-/sora-5.0.16.tgz#9a1fd11d917e910c33e61c310855bf095795ab82"
+  integrity sha512-H9014qWhe8tEDHjl8NaYRXRBHkQoBG+P5UnivT9DhbJNmPZn6ZXYD+NFHQWatAxrlriIcavjgSEVtGxZe/+/Cw==
+
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.14"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.14.tgz#d78e481a039f7566ecc9660b4ea7fe6b1fec442b"

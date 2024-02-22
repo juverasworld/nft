@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/akaya-telivigala": "^5.0.8",
+    "@fontsource/sora": "^5.0.16",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
