@@ -1,8 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import "@fontsource/akaya-telivigala";
+import { Link } from 'react-router-dom';
 
-const LogoText = styled.hi`
-font-family: "akaya-telivigala"
+const LogoText = styled.h1`
+font-family: "Akaya Telivigala", cursive;
+font-size: ${props=>props.theme.fontxxxl};
+color: ${props=>props.theme.text};
+transition: all 0.2 ease;
+
+&:hover{
+    transform:scale(1.1);
+}
 
 `
 
@@ -10,7 +19,9 @@ font-family: "akaya-telivigala"
 const Logo = () => {
   return (
     <LogoText>
-        H.
+       <Link to="/">
+        Q.
+       </Link>
     </LogoText>
   )
 }
