@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Banner from "./Banner";
 
 
 
@@ -12,14 +13,15 @@ const Section = styled.section`
   color: ${(props) => props.theme.text};
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   flex-direction: column;
 `;
 
 
 const Footer = () => {
-  return <Section>Footer</Section>;
+  return <Section>
+    <Banner/>
+  </Section>;
 };
 
 export default Footer;
