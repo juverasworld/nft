@@ -15,10 +15,22 @@ const Navbar = styled.nav`
   width: 85%;
   height: 5rem;
   margin: 0 auto;
+
+  .mobile {
+    display: none;
+  }
+  @media (max-width: 64em) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: inline-block;
+    }
+  }
 `;
 const Menu = styled.ul`
   display: flex;
- 
+
   justify-content: space-between;
   align-items: center;
   list-style: none;
@@ -34,9 +46,9 @@ const Menu = styled.ul`
     z-index: 50;
     background-color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.85)`};
     backdrop-filter: blur(2px);
-    transform: ${props =>
+    transform: ${(props) =>
       props.click ? "translateY(0)" : `translateY(100%)`};
-      transition:all 0.3s ease;
+    transition: all 0.3s ease;
     flex-direction: column;
     justify-content: center;
   }
@@ -61,16 +73,11 @@ const MenuItem = styled.li`
   }
 
   @media (max-width: 64em) {
-    margin:1rem 0;
+    margin: 1rem 0;
     &::after {
-     
-      
     }
-
   }
-
 `;
-
 
 const HambugarMenu = styled.span`
   width: ${(props) => (props.click ? "2rem" : " 1.5rem")};
@@ -156,12 +163,11 @@ const Nav = () => {
             Faq
           </MenuItem>
           <div className="mobile">
-          <Button link="https://www.google.com" text="Create Wallet" />
+            <Button link="https://www.google.com" text="Create Wallet" />
           </div>
         </Menu>
         <div className="desktop">
-
-        <Button link="https://www.google.com" text="Create Wallet" />
+          <Button link="https://www.google.com" text="Create Wallet" />
         </div>
       </Navbar>
     </Section>
