@@ -85,22 +85,41 @@ const Bottom = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  a{
-    text-decoration:underline;
+  a {
+    text-decoration: underline;
   }
 `;
 const Footer = () => {
+  const scrollTo = (id)=>{
+    let element = document.getElementById(id);
+    
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    
+    })
+      }
   return (
+    
     <Section>
       <Banner />
       <Container>
         <Left>
           <Logo />
           <IconList>
-            <a href="https://www.linkedin.com/obasi-vera-a8b155198" target={"_blank"} rel="noopener">
-              <LinkedIn/>
+            <a
+              href="https://www.linkedin.com/obasi-vera-a8b155198"
+              target={"_blank"}
+              rel="noopener"
+            >
+              <LinkedIn />
             </a>
-            <a href="https://twitter.com/Vera_Ifebuche" target={"_blank"} rel="noopener">
+            <a
+              href="https://twitter.com/Vera_Ifebuche"
+              target={"_blank"}
+              rel="noopener"
+            >
               <Twitter />
             </a>
             <a href="https://facebook.com" target={"_blank"} rel="noopener">
@@ -115,12 +134,24 @@ const Footer = () => {
           </IconList>
         </Left>
         <MenuItems>
-          <Item>Home</Item>
-          <Item>About</Item>
-          <Item>RoadMap</Item>
-          <Item>Showcase</Item>
-          <Item>Team</Item>
-          <Item>Faq</Item>
+          <Item onClick={() => scrollTo("home")} className="">
+            Home{" "}
+          </Item>
+          <Item onClick={() => scrollTo("about")} className="">
+            About{" "}
+          </Item>
+          <Item onClick={() => scrollTo("roadmap")} className="">
+            Roadmap
+          </Item>
+          <Item onClick={() => scrollTo("showcase")} className="">
+            Showcase
+          </Item>
+          <Item onClick={() => scrollTo("team")} className="">
+            Team
+          </Item>
+          <Item onClick={() => scrollTo("faq")} className="">
+            Faq
+          </Item>
         </MenuItems>
       </Container>
       <Bottom>
@@ -137,7 +168,6 @@ const Footer = () => {
             {" "}
             Vee
           </a>
-        
         </span>
       </Bottom>
     </Section>

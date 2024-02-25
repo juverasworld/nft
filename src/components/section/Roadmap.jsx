@@ -169,7 +169,7 @@ revealRefs.current.forEach((el, index)=>{
     return () => {};
   }, []);
   return (
-    <Section>
+    <Section id="roadmap">
       <Title>RoadMap</Title>
       <Container>
         <SvgContainer>

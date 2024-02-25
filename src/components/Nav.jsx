@@ -38,23 +38,37 @@ const MenuItem = styled.li`
   }
 
   &:hover::after {
-    width: 100%;
+    width: 100%; 
   }
 `;
 
 const Nav = () => {
+
+  const scrollTo = (id)=>{
+let element = document.getElementById(id);
+
+element.scrollIntoView({
+  behavior: "smooth",
+  block: "start",
+  inline: "nearest",
+
+})
+  }
+
+
+
   return (
     <div>
       <Section>
         <Navbar>
           <Logo />
           <Menu>
-            <MenuItem className="">Home </MenuItem>
-            <MenuItem className="">About </MenuItem>
-            <MenuItem className="">Roadmap</MenuItem>
-            <MenuItem className="">Showcase</MenuItem>
-            <MenuItem className="">Team</MenuItem>
-            <MenuItem className="">Faq</MenuItem>
+            <MenuItem onClick={()=>scrollTo('home')} className="">Home </MenuItem>
+            <MenuItem onClick={()=>scrollTo('about')} className="">About </MenuItem>
+            <MenuItem onClick={()=>scrollTo('roadmap')} className="">Roadmap</MenuItem>
+            <MenuItem onClick={()=>scrollTo('showcase')} className="">Showcase</MenuItem>
+            <MenuItem onClick={()=>scrollTo('team')} className="">Team</MenuItem>
+            <MenuItem onClick={()=>scrollTo('faq')} className="">Faq</MenuItem>
           </Menu>
   <Button link="https://www.google.com" text="Create Wallet"/>
         </Navbar>
