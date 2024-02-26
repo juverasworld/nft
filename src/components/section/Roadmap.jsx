@@ -33,6 +33,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+
+  @media (max-width: 64rem) {
+    width: 80%;
+  }
 `;
 
 const SvgContainer = styled.div`
@@ -140,31 +144,26 @@ const Roadmap = () => {
 
   useLayoutEffect(() => {
     let t1 = gsap.timeline();
-   
-revealRefs.current.forEach((el, index)=>{
 
-  t1.fromTo(
-    el.childNodes[0],
-    {
-      y: "0"
-    },{
-      y:"-30%",
+    revealRefs.current.forEach((el, index) => {
+      t1.fromTo(
+        el.childNodes[0],
+        {
+          y: "0",
+        },
+        {
+          y: "-30%",
 
-      scrollTrigger:{
-        id: `section-${index+1}`,
-        trigger: el,
-        start: "top center+=200px",
-        end: "bottom center",
-        scrub:true,
-       
-      }
-    }
-  )
-
-} )
-
-
-
+          scrollTrigger: {
+            id: `section-${index + 1}`,
+            trigger: el,
+            start: "top center+=200px",
+            end: "bottom center",
+            scrub: true,
+          },
+        }
+      );
+    });
 
     return () => {};
   }, []);
