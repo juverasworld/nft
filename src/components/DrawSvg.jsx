@@ -14,6 +14,7 @@ const VectorContainer = styled.div`
   overflow: hidden;
 
   svg {
+    display: inline-block;
     width: 100%;
     height: 100%;
   }
