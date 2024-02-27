@@ -28,7 +28,9 @@ const Section = styled.section`
   @media (max-width: 30em) {
     animation-duration: 15s;
 
+
   };
+}
   & > *:last-child {
     animation-duration: 15s;
 
