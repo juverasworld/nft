@@ -11,6 +11,11 @@ const Container = styled.div`
   flex-direction: column;
   border-bottom: 1px solid ${(props) => props.theme.carouselColor};
   margin: 3rem 0;
+
+  @media (max-width: 48em) {
+  margin: 2rem 0;
+
+  };
 `;
 
 
@@ -44,7 +49,12 @@ const Indicator = styled.span`
     width:1rem;
     height:auto;
     fill:${(props) => props.theme.carouselColor};
-  }
+  };
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxl};
+
+  
+    };
 
 `;
 

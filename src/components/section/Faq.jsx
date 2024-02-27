@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Section = styled.section`
   min-height: 100vh;
-  height:100vh
+  height: auto;
   width: 100%;
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
@@ -25,6 +25,10 @@ const Title = styled.h1`
   margin: 1rem auto;
   border-bottom: 2px solid ${(props) => props.theme.carouselColor};
   width: fit-content;
+
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
 `;
 
 const Container = styled.div`
@@ -33,10 +37,26 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 64em) {
+    width: 80%;
+  }
+  @media (max-width: 48em) {
+    width: 90%;
+    flex-direction: column;
+    & > *:last-child {
+      & > *:first-child {
+        margin-top:0;
+      }
+    }
+  }
 `;
 
 const Box = styled.div`
   width: 45%;
+  @media (max-width: 64em) {
+    width: 90%;
+    align-self: center;
+  }
 `;
 const Faq = () => {
   const ref = useRef(null);
@@ -46,15 +66,15 @@ const Faq = () => {
     let element = ref.current;
     ScrollTrigger.create({
       trigger: element,
-      start:"top top",
+      start: "top top",
       end: "bottom top",
-      pin:true,
-      pinSpacing:false,
-      scrub:true,
+      pin: true,
+      pinSpacing: false,
+      scrub: true,
     });
 
     return () => {
-      ScrollTrigger.kill()
+      ScrollTrigger.kill();
     };
   }, []);
 
