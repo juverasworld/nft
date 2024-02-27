@@ -60,6 +60,18 @@ const Title = styled.h1`
   width: 35%;
   text-shadow: 1px 1px 2px ${(props) => props.theme.text};
   text-transform: capitalize;
+
+  @media (max-width: 64em) {
+    font-size: ${(props) => props.theme.fontxxl};
+    text-align: center;
+    width: 40%;
+  }
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxl};
+    padding: 2rem 0;
+
+    width: 100%;
+  }
 `;
 
 const BtnConatiner = styled.div`
@@ -67,6 +79,11 @@ const BtnConatiner = styled.div`
   display: flex;
   justify-content: flex-end;
   z-index: 10;
+
+  @media (max-width: 48em) {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 const JoinNow = styled.button`
@@ -84,6 +101,14 @@ const JoinNow = styled.button`
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.2s ease;
+  position: relative;
+  @media (max-width: 48em) {
+    padding: 1rem 2rem;
+  }
+  @media (max-width: 48em) {
+    padding: 0.5rem 2rem;
+    font-size: ${(props) => props.theme.fontsm};
+  }
 
   &:hover {
     transform: scale(0.9);
