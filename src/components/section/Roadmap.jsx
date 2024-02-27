@@ -22,6 +22,10 @@ const Title = styled.h1`
   margin: 1rem auto;
   border-bottom: 2px solid ${(props) => props.theme.text};
   width: fit-content;
+
+  @media (max-width: 40rem) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
 `;
 
 const Container = styled.div`
@@ -36,6 +40,9 @@ const Container = styled.div`
 
   @media (max-width: 64rem) {
     width: 80%;
+  }
+  @media (max-width: 48rem) {
+    width: 90%;
   }
 `;
 
@@ -54,12 +61,29 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 
+@media (max-width: 48rem) {
+  width: 90%;
+}
+
 &>*:nth-of-type(2n+1){
   justify-content:start;
+  @media (max-width: 48rem) {
+    justify-content:center;
 
+  };
   div{
     border-radius: 50px 0 50px 0;
     text-align:right;
+
+    @media (max-width: 48rem) {
+      border-radius:0  50px 0 50px ;
+      text-align:left;
+      p{
+        border-radius:0 40px 0 40px;
+    
+      }
+  
+    };
   }
   p{
     border-radius: 40px 0 40px 0;
@@ -68,10 +92,15 @@ align-items:center;
 }
 &>*:nth-of-type(2n){
   justify-content:end;
+  @media (max-width: 48rem) {
+    justify-content:center;
+
+  };
   div{
     border-radius:0 50px 0 50px;
     text-align-left;
   }
+ 
   p{
     border-radius:0 40px 0 40px;
 
@@ -85,12 +114,19 @@ const Item = styled.li`
   width: 100%;
   height: 100%;
   display: flex;
+  @media (max-width: 48rem) {
+    justify-content: flex-end !important;
+  }
 `;
 const ItemContainer = styled.div`
   width: 40%;
   height: fit-content;
   padding: 1rem;
   border: 3px solid ${(props) => props.theme.text};
+
+  @media (max-width: 48rem) {
+    width: 70%;
+  }
 `;
 
 const SubTitle = styled.span`
@@ -98,6 +134,11 @@ const SubTitle = styled.span`
   font-size: ${(props) => props.theme.fontxl};
   text-transform: capitialize;
   color: ${(props) => props.theme.text};
+
+  @media (max-width: 40rem) {
+    font-size: ${(props) => props.theme.fontlg};
+    font-weight: 600;
+  };
 `;
 
 const Text = styled.span`
@@ -108,6 +149,10 @@ const Text = styled.span`
 
   font-weight: 400;
   margin: 0.5rem 0;
+
+  @media (max-width: 40rem) {
+    font-size: ${(props) => props.theme.fontxs};
+  };
 `;
 
 const Box = styled.p`
