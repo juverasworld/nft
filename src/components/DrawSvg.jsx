@@ -17,6 +17,9 @@ const VectorContainer = styled.div`
     width: 100%;
     height: 100%;
   }
+  @media (max-width: 48rem) {
+    left: 1rem;
+  }
 `;
 
 const Bounce = keyframes`
@@ -35,6 +38,10 @@ const Ball = styled.div`
   border-radius: 50%;
   background-color: ${(props) => props.theme.text};
   animation: ${Bounce} 0.5s linear infinite alternate;
+
+  @media (max-width: 48rem) {
+    left: 1rem;
+  }
 `;
 
 const DrawSvg = () => {
@@ -66,7 +73,7 @@ const DrawSvg = () => {
 
           svg.style.strokeDashoffset = length - draw;
         },
-        
+
         onToggle: (self) => {
           if (self.isActive) {
             ballref.current.style.display = "none";
@@ -77,8 +84,7 @@ const DrawSvg = () => {
       },
     });
     return () => {
-
-        if(t1) t1.kill();
+      if (t1) t1.kill();
     };
   }, []);
 
