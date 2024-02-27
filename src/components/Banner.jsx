@@ -20,7 +20,12 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+
   overflow: hidden;
+  @media (max-width: 48em) {
+    height: 15rem;
+    flex-direction: column;
+  }
 `;
 
 const ImgContainer = styled.div`
@@ -38,6 +43,13 @@ const ImgContainer = styled.div`
     width: 15rem;
     height: auto;
   }
+
+  @media (max-width: 48em) {
+    img {
+      width: 10rem;
+      height: auto;
+    }
+  }
 `;
 
 const Title = styled.h1`
@@ -46,7 +58,7 @@ const Title = styled.h1`
   padding: 1rem 2rem;
   z-index: 10;
   width: 35%;
-  text-shadow:1px 1px 2px ${(props) => props.theme.text};
+  text-shadow: 1px 1px 2px ${(props) => props.theme.text};
   text-transform: capitalize;
 `;
 
